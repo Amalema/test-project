@@ -26,7 +26,7 @@ class UserServiceImplTest {
 
   @Mock private UserRepository userRepository;
 
-  @InjectMocks private UserService userService;
+  @InjectMocks private UserServiceImpl userService;
 
   @BeforeEach
   void setUp() {
@@ -62,6 +62,7 @@ class UserServiceImplTest {
     user.setLastName(userRegistrationDto.getLastName());
     user.setDepartment(department);
     user.setAddresses(singleton(address));
+    user.setId(1L);
 
     when(userRepository.save(Mockito.any(User.class))).thenReturn(user);
 

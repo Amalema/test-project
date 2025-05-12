@@ -30,6 +30,6 @@ public interface UserApi {
    * @param id user id
    * @return user infos
    */
-  @GetMapping("/users/${userId}")
+  @GetMapping("/users/${id}")
   Mono<UserDto> findUserById(long id);
 }
